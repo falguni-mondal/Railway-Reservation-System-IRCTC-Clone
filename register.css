@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+:root {
+    /* Logo Size */
+    --logo-xl: clamp(3.5rem, 6vw, 8rem);
+    --logo-gap-sm: clamp(0.5rem, 2.5vw, 3rem);
+    /* Font Sizes */
+    --fs-xl: clamp(1.5rem, 2.5vw, 4rem);
+    --fs-l: clamp(1.2rem, 2vw, 3rem);
+    --fs-ml: clamp(1rem, 1.5vw, 2.5rem);
+    --fs-m: clamp(0.8rem, 1.2vw, 2rem);
+    --fs-s: clamp(0.3rem, 1vw, 1.5rem);
+    /* Gap Sizes */
+    --gap-xl: clamp(2rem, 6vw, 8rem);
+    --gap-l: clamp(1.5rem, 6vw, 6rem);
+    --gap-m: clamp(1rem, 6vw, 5rem);
+    --gap-sm: clamp(1rem, 3vw, 4rem);
+    --gap-bs: clamp(1rem, 1.8vw, 2rem);
+    --gap-s: clamp(0.8rem, 1.2vw, 1.5rem);
+    --gap-ss: clamp(0.8rem, 0.8vw, 1.2rem);
+    --gap-mini: clamp(0.6rem, 0.6vw, 1rem);
+    /* Padding Sizes */
+    --padding-updown: clamp(0.3rem, 0.6vw, 1rem);
+    --padding-updown-l: clamp(0.5rem, 0.7vw, 1rem);
+    --padding-side: clamp(0.5rem, 2vw, 2.4rem);
+}
+
+#register-body {
+    overflow-x: hidden;
+    background-color: #edf0f3;
+}
+
+/*! HEADER */
+header {
+    display: flex;
+    width: 100%;
+    height: 7vmax;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* INDIAN RAILWAYS LOGO */
+header #indian-railways-logo {
+    padding: 0.5rem 0px 0px var(--logo-gap-sm);
+}
+
+header #indian-railways-logo img {
+    width: var(--logo-xl);
+}
+
+/* Home-icon for media queries */
+#home-icon {
+    display: none;
+}
+
+/* NAVIGATION BAR */
+#navbar {
+    width: fit-content;
+    padding: var(--gap-s) var(--gap-l) 0px 0px;
+}
+
+#navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-s);
+}
+
+#navbar ul li {
+    list-style: none;
+    padding: 2rem var(--padding-side);
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: var(--fs-m);
+    transition: color 0.3s ease-in-out;
+}
+
+#navbar ul li a:hover {
+    color: orange;
+}
+
+/* Trains Submenu */
+#submenu-trains {
+    display: none;
+}
+
+#submenu-trains ul {
+    display: block;
+    text-align: left;
+    padding: 0px;
+    gap: 0;
+    width: 100%;
+}
+
+#submenu-trains ul li {
+    width: 100%;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    border-radius: 3px;
+}
+
+#submenu-trains ul li a {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--fs-s);
+    font-weight: 400;
+}
+
+#submenu-trains ul li:hover {
+    background-color: #007FFF;
+}
+
+#navbar ul li:hover #submenu-trains {
+    display: block;
+    position: absolute;
+    margin-top: 1vw;
+    background: #213d77;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Cancel Ticket SUbmenu */
+#submenu-cancel-ticket {
+    display: none;
+    padding-left: 1rem;
+}
+
+#submenu-cancel-ticket ul {
+    min-width: 2.5vw;
+    background: #213d77;
+    border-radius: 5px;
+}
+
+#submenu-cancel-ticket ul li {
+    padding: var(--padding-updown) var(--padding-side);
+}
+
+#submenu-cancel-ticket ul li a {
+    color: white;
+}
+
+#submenu-trains ul li:hover #submenu-cancel-ticket {
+    display: block;
+    position: absolute;
+    margin-top: -5.5vh;
+    margin-left: 8vw;
+    padding-left: 1.5rem;
+}
+/*............... Login Modal ................*/
+.login-header {
+    display: grid;
+    background-color: #213d77;
+    color: white;
+    grid-template-columns: 6fr 2fr;
+}
+
+.login-header h1 {
+    justify-self: flex-end;
+}
+
+.login-header button {
+    justify-self: flex-end;
+    margin: 0 !important;
+    background-color: white;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-input {
+    width: 100%;
+    font-size: 1rem;
+    outline: 0;
+    border: 1px solid #213d77;
+    border-radius: 3px;
+    padding: 10px 0px 10px 3rem;
+    color: #213085;
+}
+
+.login-input::placeholder {
+    color: #213d77;
+    font-weight: 500;
+}
+
+.login-input:focus {
+    color: #213085;
+    border: 2px solid #213085;
+}
+
+/* LOGIN ICONS */
+.login-icon {
+    position: absolute;
+    width: 1rem;
+    padding: 0.7rem 0px 0px 1.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #213085;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+.login-input-container #login-frgtpass-register{
+    display: flex;
+    justify-content: space-between;
+}
+.login-form button{
+    background-color: #fb792b;
+    border: 0;
+}
+
+/*................. Agent Login Modal ................*/
+#agent-login-header h1{
+    justify-self: center;
+    margin-left: 7rem;
+}
+/*! MAIN */
+#register-body main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #edf0f3;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Main Container bg white */
+#main-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 95%;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    background: white;
+}
+
+/* Sign in option */
+#main-container #signin {
+    align-self: center;
+}
+
+#signin a {
+    text-decoration: underline;
+    font-size: var(--fs-m);
+    color: orange;
+    font-weight: 600;
+}
+
+/* Main Section-form and videos */
+#main-section {
+    display: flex;
+    width: 100%;
+    height: 90%;
+    justify-content: space-between;
+}
+
+/* Video Container */
+#video-aside {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    height: auto;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#video-aside .video {
+    position: relative;
+    background-color: #333333;
+    width: fit-content;
+    height: 12rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#video-aside .video video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Form Section-heading,sub-heading,options,form */
+#form-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0px 0px 0px var(--padding-side);
+}
+
+/*! Option */
+.active {
+    background-color: #e2f1ff;
+}
+
+.container {
+    padding-left: 0px;
+}
+
+/* #option-container ul{
+    display: flex;
+    gap: var(--gap-ss);
+    margin-top: 0.3em;
+}
+
+#option-container ul li{
+    list-style: none;
+    padding: 0.2em 0.6em;
+    border-radius: 3px 3px 0px 0px;
+}
+
+#option-container ul li a{
+    text-decoration: none;
+    font-size: var(--fs-m);
+    color: black;
+}
+
+#option-container ul #basic-opt{
+    background-color: #e2f1ff;
+}
+......................................................... */
+/* #option-container ul #basic-opt:focus-visible{
+    background-color: #e2f1ff;
+}
+
+#option-container ul #basic-opt:focus-visible #basic-form {
+    display: block;
+    background-color: #e2f1ff;
+} */
+/* Form Heading & Sub Heading */
+#form-section #heading {
+    font-size: var(--fs-xl);
+}
+
+#form-section #sub-heading {
+    color: #333333;
+    font-size: var(--fs-m);
+}
+
+#form-section #sub-heading span {
+    font-size: var(--fs-m);
+    display: block;
+    font-weight: 700;
+}
+
+.register-form {
+    padding-top: 1em;
+    height: fit-content;
+    padding-bottom: 0.5rem;
+}
+
+/*.............. BASIC FORM ..............*/
+.register-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0.5em 1em;
+    gap: var(--gap-s);
+    width: 95%;
+    height: 100%;
+}
+.register-form form p{
+    font-weight: 600;
+}
+.register-form form p span{
+    color: red;
+}
+/* Basic Name inputs
+#basic-form form #input-name{
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap-mini);
+}
+
+#basic-form form #input-name > *{
+    flex-grow: 1;
+} */
+/* All Inputs-name, username, password */
+.input {
+    padding: var(--padding-updown-l);
+    border-radius: 5px;
+    color: #213d77;
+    outline: 0;
+    border: 1px solid rgb(131, 136, 153);
+    transition-property: border;
+}
+
+.input::placeholder {
+    color: #213d77;
+}
+
+.input:focus-visible {
+    border: 2px solid #213d77;
+}
+
+/* Basic Form Button */
+.register-form form .form-button {
+    align-self: flex-end;
+}
+
+.register-form form .form-button button {
+    padding: 0.3em 2em;
+    margin-top: 0.2em;
+    border-radius: 5px;
+    border: 0px;
+    background-color: orange;
+    color: white;
+    font-size: var(--fs-m);
+}
+
+/*............... PERSONAL FORM................ */
+#personal-form{
+    padding-top: 2rem;
+}
+#personal-form form{
+    gap: var(--gap-bs);
+}
+.input-container{
+    display: flex;
+    justify-content: space-between;
+}
+.input-container>*{
+    width: 48%;
+}
+#personal-form .dob input{
+    border: 1px solid rgb(131, 136, 153);
+}
+#personal-form .occupation button{
+    background-color: white;
+    color: #213d77;
+    font-weight: 500;
+    width: 100%;
+}
+#personal-form label{
+    color: #213d77;
+}
+.radio{
+    border: 1px solid #333333;
+}
+#personal-form .input{
+    background-color: white;
+    padding: var(--padding-updown-l);
+}
+#mail-phone input{
+    width: 100%;
+}
+/*! FOOTER */
+footer{
+    position: relative;
+    padding-bottom: 1rem;
+    bottom: 0;
+    background-color: white;
+}
+
+/*!............................MEDIA QUERIES 670px.......................... */
+@media (max-width: 670px) {
+
+    /* Video Aside Section */
+    #main-section aside {
+        display: none;
+    }
+
+    /* Sign In */
+    #main-container #signin a {
+        font-size: var(--fs-ml);
+    }
+
+    /* Options-Basic, Personal, Address */
+    #form-section #option-container ul li a {
+        font-size: var(--fs-ml);
+    }
+
+    /* Name Inputs gap
+    #basic-form form #input-name{
+        gap: var(--gap-sm);
+    } */
+    /* Form-gaps and padding inputs */
+    .register-form form {
+        gap: var(--gap-sm);
+    }
+
+    .register-form .input {
+        padding: 0.8rem;
+    }
+
+    /* Next Button- Basic Section */
+    .register-form form .form-button button {
+        padding: 0.3rem 2rem;
+        font-size: var(--fs-ml);
+    }
+}
+
+/*!........................... MEDIA QUERRIES 768px......................... */
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        height: 10vh;
+    }
+
+    /* Navbar */
+    #navbar {
+        display: none;
+    }
+
+    /* Navigation Home icon */
+    nav #home-icon {
+        display: inline;
+        position: relative;
+        top: 0.2em;
+        right: 1.5rem;
+        padding: var(--padding-updown) var(--padding-side);
+        background-color: #edf0f3;
+        border-radius: 5px;
+    }
+
+    nav #home-icon a {
+        color: #213d77;
+    }
+
+    /* Main Section-form and video */
+    #main-section {
+        flex-direction: column;
+    }
+
+    /* Video Section */
+    #main-section aside {
+        width: 100%;
+        height: 50%;
+        flex-direction: row;
+    }
+
+    #main-section aside .video {
+        height: fit-content;
+        border-radius: 10px;
+    }
+
+    /* Form Section */
+    #main-section #form-section {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Options-basic, personal, address */
+    #option-container ul li a {
+        font-size: var(--fs-m);
+    }
+}
+
+/*!............................ MEDIA QUERIES 902px............................ */
+@media(max-width: 902px) {
+    .input {
+        padding: var(--padding-updown);
+    }
+    form .input-container{
+        flex-direction: column;
+        gap: var(--gap-sm);
+    }
+    form .input-container>*{
+        width: 100%;
+    }
+    #personal-form .occupation button{
+        width: 100%;
+    }
+    .radio-div label{
+        font-size: 0.9rem;
+    }
+}
+
+/*!............................ MEDIA QUERIES MIN 902px............................ */
+@media(min-width: 903px) {
+
+    #main-section aside .video {
+        height: fit-content;
+        width: 65%;
+    }
+}

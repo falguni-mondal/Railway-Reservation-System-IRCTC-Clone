@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- !Title -->
+    <title>Indian Railways | Ticket Reservation</title>
+    <!--!Title Icon-->
+    <link rel="title icon" type="image/x-icon" href="logos/Indian_Railways_Logo.jpg">
+    <!--!.......... BOOTSTRAP ..........-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- !CSS External Link -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!--! Icon Link-->
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- UNICONS ICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!--! HEADER -->
+    <header>
+        <!-- INDIAN RAILWAYS LOGO -->
+        <div id="indian-railways-logo"><img src="logos/Indian_Railways_Logo.jpg" alt="IndianRailwaysLogo">
+        </div>
+        <!-- NAVIGATION -->
+        <nav>
+            <!-- Home Icon-media queries -->
+            <div id="home-icon"><a href="../index page/index.html"><i class="fa-solid fa-house"></i></a></div>
+            <!-- Navigation Bar -->
+            <div id="navbar">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></a></i></a>
+                    </li>
+                    <li><a href="#loginModal" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="">Trains</a>
+                        <!-- Trains Submenu -->
+                        <div id="submenu-trains">
+                            <ul>
+                                <li><a href="">Book Ticket</a></li>
+                                <li><a href="">Cancel Ticket</a>
+                                    <div id="submenu-cancel-ticket">
+                                        <!-- Cancel Ticket Submenu -->
+                                        <ul>
+                                            <li><a href="">E-Ticket</a></li>
+                                            <li><a href="">Counter Ticket</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="">PNR Enquiry</a></li>
+                                <li><a href="">Train Scedule</a></li>
+                                <li><a href="">Track Your Train</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#agentLoginModal" data-bs-toggle="modal" data-bs-target="#agentLoginModal">Agent
+                            Login</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars navmenu"></i>
+        </nav>
+
+        <!--Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog login-dialog">
+                <div class="modal-content login-content">
+                    <div class="modal-header login-header">
+                        <h1 class="modal-title fs-5" id="loginModalLabel">Sign In to Your Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body login-body">
+                        <form action="" class="login-form">
+                            <div class="login-input-container" id="email-login">
+                                <i class="bi bi-person-fill login-icon"></i>
+                                <input type="email" class="login-input" required placeholder="Email ID">
+                            </div>
+                            <div class="login-input-container" id="password-login">
+                                <i class="bi bi-lock-fill login-icon"></i>
+                                <input type="password" class="login-input" required placeholder="Password">
+                                <div id="login-frgtpass-register">
+                                    <a href="">Forget Password?</a>
+                                    <a href="../Registration/register.html">New Register</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agent Login Modal -->
+        <div class="modal fade" id="agentLoginModal" tabindex="-1" aria-labelledby="agentLoginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog login-dialog">
+                <div class="modal-content login-content">
+                    <div class="modal-header login-header" id="agent-login-header">
+                        <h1 class="modal-title fs-5" id="agentLoginModalLabel">AGENT LOGIN</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body login-body">
+                        <form action="" class="login-form">
+                            <div class="login-input-container" id="email-login">
+                                <i class="bi bi-person-fill login-icon"></i>
+                                <input type="email" class="login-input" required placeholder="Email ID">
+                            </div>
+                            <div class="login-input-container" id="password-login">
+                                <i class="bi bi-lock-fill login-icon"></i>
+                                <input type="password" class="login-input" required placeholder="Password">
+                                <div id="login-frgtpass-register">
+                                    <a href="">Forget Password?</a>
+                                    <a href="../Registration/register.html">New Register</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--!MAIN PAGE-->
+    <main>
+        <div id="main-bg">
+            <div class="book-ticket-section">
+                <div class="pnr-chart-section">
+                    <!--PNR STATUS-->
+                    <div class="pnr-chart pnr">
+                        <!-- <i class="uil uil-file-search-alt"></i> -->
+                        <a href="PNR Status.html" target="_blank">PNR STATUS</a>
+                    </div>
+                    <!--CHART VACANCY-->
+                    <div class="pnr-chart chart">
+                        <!-- <i class="uil uil-notes"></i> -->
+                        <a href="Chart Vacancy.html" target="_blank">CHART / VACANCY</a>
+                    </div>
+                    <!--PNR STATUS.............CHART VACANCY................ENDING-->
+                </div>
+                <!--!Form Logos-->
+                <div class="form-logos">
+                    <img src="logos/AKAM Logo.png" alt="AzadiKAM">
+                    <label>BOOK TICKET</label>
+                    <img src="logos/G20 logo.png" alt="G20">
+                </div>
+                <div class="form-container">
+                    <!--!Form-->
+                    <form action="">
+                        <div class="group-inputs">
+                            <div class="from-to group-inputs-member">
+                                <!--FROM DESTINATION-->
+                                <div class="from">
+                                    <div>
+                                        <span>
+                                            <i class="fa-solid fa-location-arrow icon" aria-hidden="true"></i>
+                                        </span>
+                                        <span>
+                                            <input type="text" required placeholder="From" class="inp"
+                                                autocomplete="off">
+                                        </span>
+                                    </div>
+                                    <a href=""><i class="fa-solid fa-right-left fa-rotate-90"
+                                            style="color: #213085; padding: 7px 0px;"></i>
+                                    </a>
+                                </div>
+                                <!--TO DESTINATION-->
+                                <div class="to">
+                                    <span>
+                                        <i class="fa-solid fa-location-dot icon" aria-hidden="true"></i>
+                                    </span>
+                                    <span>
+                                        <input type="text" required placeholder="To" class="inp" autocomplete="off">
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- DATE & CLASS -->
+                            <div class="date-class group-inputs-member">
+                                <!--DATE-->
+                                <div class="date">
+                                    <span>
+                                        <i class="fa-solid fa-calendar-days icon"></i>
+                                    </span>
+                                    <span>
+                                        <input type="date" class="inpdc" required id="dateinp">
+                                    </span>
+                                    <div></div>
+                                </div>
+                                <!--CLASSES-->
+                                <div class="class">
+                                    <span>
+                                        <i _ngcontent-xgv-c67="" class="fa fa-briefcase icon"></i>
+                                    </span>
+                                    <span>
+                                        <select name="classes" class="inpdc">
+                                            <option value="All Classes">All Classes</option>
+                                            <option value="Anubhuti Class (EA)">Anubhuti Class (EA)</option>
+                                            <option value="AC First Class (1A)">AC First Class (1A)</option>
+                                            <option value="Vistadome AC (EV)">Vistadome AC (EV)</option>
+                                            <option value="Exec. Chair Car (EC)">Exec. Chair Car (EC)</option>
+                                            <option value="AC 2 Tier (2A)">AC 2 Tier (2A)</option>
+                                            <option value="First Class (FC)">First Class (FC)</option>
+                                            <option value="AC 3 Tier (3A)">AC 3 Tier (3A)</option>
+                                            <option value="AC 3 Economy (3E)">AC 3 Economy (3E)</option>
+                                            <option value="Vistadome Chair Car (VC)">Vistadome Chair Car (VC)</option>
+                                            <option value="AC Chair Car (CC)">AC Chair Car (CC)</option>
+                                            <option value="SLeeper (SL)">SLeeper (SL)</option>
+                                            <option value="Vistadome Non AC (VS)">Vistadome Non AC (VS)</option>
+                                            <option value="Second Sitting (2S)">Second Sitting (2S)</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div>
+                            <!--General-->
+                            <div class="boggy-out group-inputs-member">
+                                <div class="boggy">
+                                    <!--General icon-->
+                                    <span>
+                                        <i _ngcontent-caa-c67="" class="fa fa-th-large iconb"></i>
+                                    </span>
+                                    <!--General main-->
+                                    <span>
+                                        <select name="Boggy" id="Boggy">
+                                            <option value="GENERAL">GENERAL</option>
+                                            <option value="LADIES">LADIES</option>
+                                            <option value="LOWER BERTH/SR.CITIZEN">LOWER BERTH/SR.CITIZEN</option>
+                                            <option value="PERSON WITH DISABILITY">PERSON WITH DISABILITY</option>
+                                            <option value="TATKAL">TATKAL</option>
+                                            <option value="PREMIUM TATKAL"> PREMIUM TATKAL</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--CheckBoxes-->
+                        <div class="checkbox-out">
+                            <!--Disability-->
+                            <span>
+                                <input type="checkbox" id="Disability concession">
+                                <label for="Disability concession">Person With Disability Concession</label>
+                            </span>
+                            <!--Flexible-->
+                            <span>
+                                <input type="checkbox" id="Flexible">
+                                <label for="Flexible">Flexible With Date</label>
+                            </span>
+                            <!--Available Berth-->
+                            <span>
+                                <input type="checkbox" id="Available Berth">
+                                <label for="Available Berth">Train with Available Berth</label>
+                            </span>
+                            <!--Pass Concession-->
+                            <span>
+                                <input type="checkbox" id="Pass Concession">
+                                <label for="Pass Concession">Railway Pass Concession</label>
+                            </span>
+                        </div>
+                        <!--Search Button-->
+                        <div class="bttn">
+                            <button type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+
+    <!--!........... BOOTSTRAP ............-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

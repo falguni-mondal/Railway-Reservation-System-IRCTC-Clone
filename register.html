@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Railways | Register new Account</title>
+    <!-- FONT LINKS
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"> -->
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- UNICONS ICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!--! BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- EXTERNAL STYLESHEET -->
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body id="register-body">
+    <!--! HEADER -->
+    <header>
+        <!-- INDIAN RAILWAYS LOGO -->
+        <div id="indian-railways-logo"><img src="logos/Indian_Railways_Logo.jpg" alt="IndianRailwaysLogo">
+        </div>
+        <!-- NAVIGATION -->
+        <nav>
+            <!-- Home Icon-media queries -->
+            <div id="home-icon"><a href="../index page/index.html"><i class="fa-solid fa-house"></i></a></div>
+            <!-- Navigation Bar -->
+            <div id="navbar">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></a></i></a>
+                    </li>
+                    <li><a href="#loginModal" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="">Trains</a>
+                        <!-- Trains Submenu -->
+                        <div id="submenu-trains">
+                            <ul>
+                                <li><a href="../index page/index.html">Book Ticket</a></li>
+                                <li><a href="">Cancel Ticket</a>
+                                    <div id="submenu-cancel-ticket">
+                                        <!-- Cancel Ticket Submenu -->
+                                        <ul>
+                                            <li><a href="">E-Ticket</a></li>
+                                            <li><a href="">Counter Ticket</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="">PNR Enquiry</a></li>
+                                <li><a href="">Train Scedule</a></li>
+                                <li><a href="">Track Your Train</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#agentLoginModal" data-bs-toggle="modal" data-bs-target="#agentLoginModal">Agent
+                            Login</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog login-dialog">
+                <div class="modal-content login-content">
+                    <div class="modal-header login-header">
+                        <h1 class="modal-title fs-5" id="loginModalLabel">Sign In to Your Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body login-body">
+                        <form action="" class="login-form">
+                            <div class="login-input-container" id="email-login">
+                                <i class="bi bi-person-fill login-icon"></i>
+                                <input type="email" class="login-input" required placeholder="Email ID">
+                            </div>
+                            <div class="login-input-container" id="password-login">
+                                <i class="bi bi-lock-fill login-icon"></i>
+                                <input type="password" class="login-input" required placeholder="Password">
+                                <div id="login-frgtpass-register">
+                                    <a href="">Forget Password?</a>
+                                    <a href="../Registration/register.html">New Register</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agent Login Modal -->
+        <div class="modal fade" id="agentLoginModal" tabindex="-1" aria-labelledby="agentLoginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog login-dialog">
+                <div class="modal-content login-content">
+                    <div class="modal-header login-header" id="agent-login-header">
+                        <h1 class="modal-title fs-5" id="agentLoginModalLabel">AGENT LOGIN</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body login-body">
+                        <form action="" class="login-form">
+                            <div class="login-input-container" id="email-login">
+                                <i class="bi bi-person-fill login-icon"></i>
+                                <input type="email" class="login-input" required placeholder="Email ID">
+                            </div>
+                            <div class="login-input-container" id="password-login">
+                                <i class="bi bi-lock-fill login-icon"></i>
+                                <input type="password" class="login-input" required placeholder="Password">
+                                <div id="login-frgtpass-register">
+                                    <a href="">Forget Password?</a>
+                                    <a href="../Registration/register.html">New Register</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--! MAIN -->
+    <main>
+        <!-- MAIN CONTAINER-bg white -->
+        <div id="main-container">
+            <!-- Sign In option -->
+            <h2 id="signin"><a href="#loginModal" data-bs-toggle="modal" data-bs-target="#loginModal">SIGN IN</a>
+            </h2>
+            <!-- Main Section-form and video -->
+            <div id="main-section">
+                <!-- Form Section -->
+                <section id="form-section">
+                    <!-- Heading & Sub-Heading -->
+                    <h2 id="heading">Create Your Account</h2>
+                    <p id="sub-heading">
+                        <span>GARBAGE/JUNK VALUES IN PROFILE MAY LEAD TO DEACTIVATION</span>
+                        Please use a valid E-Mail ID and mobile number in registration.
+                    </p>
+                    <!-- Basic or Personal or Address -->
+                    <div class="container">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-basic-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-basic" type="button" role="tab" aria-controls="nav-basic"
+                                    aria-selected="true">Basic</button>
+                                <button class="nav-link" id="nav-personal-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-personal" type="button" role="tab" aria-controls="nav-personal"
+                                    aria-selected="false">Personal</button>
+                                <button class="nav-link" id="nav-address-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-address" type="button" role="tab" aria-controls="nav-address"
+                                    aria-selected="false">Address</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-basic" role="tabpanel"
+                                aria-labelledby="nav-basic-tab" tabindex="0">
+                                <!-- Basic Form Container-bg blue -->
+                                <div class="register-form" id="basic-form">
+                                    <!-- Basic Form -->
+                                    <form action="">
+                                        <p><span>info!</span> Please provide your exact name as per Aadhaar</p>
+                                        <input type="text" class="input" id="first-name" placeholder="First Name"
+                                            required>
+                                        <input type="text" class="input" id="middle-name"
+                                            placeholder="Middle Name(optional)">
+                                        <input type="text" class="input" id="last-name" placeholder="Last Name"
+                                            required>
+                                        <input type="text" class="input" id="username" placeholder="User Name" required>
+                                        <input type="password" class="input" id="password" placeholder="Password"
+                                            required>
+                                        <input type="password" class="input" id="confirm-password"
+                                            placeholder="Confirm Password" required>
+                                        <div id="nxt-btn" class="form-button">
+                                            <button>Next</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--.................. PERSONAL TAB .................-->
+                            <div class="tab-pane fade" id="nav-personal" role="tabpanel"
+                                aria-labelledby="nav-personal-tab" tabindex="0">
+                                <!-- Personal Form Container-bg blue -->
+                                <div class="register-form" id="personal-form">
+                                    <!-- Personal Form -->
+                                    <form action="">
+                                        <div id="occupation-dob" class="input-container">
+                                            <div class="dropdown-center occupation">
+                                                <button class="btn btn-secondary dropdown-toggle input" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Select Occupation
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">GOVERNMENT</a></li>
+                                                    <li><a class="dropdown-item" href="#">PUBLIC</a></li>
+                                                    <li><a class="dropdown-item" href="#">PRIVATE</a></li>
+                                                    <li><a class="dropdown-item" href="#">PROFESSIONAL</a></li>
+                                                    <li><a class="dropdown-item" href="#">SELF EMPLOYEED</a></li>
+                                                    <li><a class="dropdown-item" href="#">STUDENT</a></li>
+                                                    <li><a class="dropdown-item" href="#">OTHERS</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="form-floating dob">
+                                                <input type="date" class="form-control" id="floatingInput dob" required>
+                                                <label for="dob">Date of Birth</label>
+                                            </div>
+                                        </div>
+                                        <div id="marital-country" class="input-container">
+                                            <div class="marital-status">
+                                                <div class="form-check form-check-inline radio-div">
+                                                    <input class="form-check-input radio" type="radio"
+                                                        name="married-or-unmarried" id="married-radio" value="married">
+                                                    <label class="form-check-label married-txt"
+                                                        for="married-radio">Married</label>
+                                                </div>
+                                                <div class="form-check form-check-inline radio-div">
+                                                    <input class="form-check-input radio" type="radio"
+                                                        name="married-or-unmarried" id="unmarried-radio"
+                                                        value="unmarried">
+                                                    <label class="form-check-label unmarried-txt"
+                                                        for="unmarried-radio">Unmarried</label>
+                                                </div>
+                                            </div>
+                                            <select name="country" id="country" class="input">
+                                                <option value="none">Select Your Nationality</option>
+                                                <option value="india">India</option>
+                                                <option value="russia">Russia</option>
+                                                <option value="saudi-arab">Saudi Arab</option>
+                                                <option value="bangladesh">Bangladesh</option>
+                                                <option value="pakistan">Pakistan</option>
+                                                <option value="china">China</option>
+                                                <option value="japan">Japan</option>
+                                                <option value="north-korea">North Korea</option>
+                                                <option value="south-korea">South Korea</option>
+                                                <option value="taiwan">Taiwan</option>
+                                                <option value="sri-lanka">Sri Lanka</option>
+                                            </select>
+                                        </div>
+                                        <div class="gender">
+                                            <div class="form-check form-check-inline radio-div">
+                                                <input class="form-check-input radio" type="radio" name="gender"
+                                                    id="male-radio" value="male">
+                                                <label class="form-check-label male-txt" for="male-radio">Male</label>
+                                            </div>
+                                            <div class="form-check form-check-inline radio-div">
+                                                <input class="form-check-input radio" type="radio" name="gender"
+                                                    id="female-radio" value="female">
+                                                <label class="form-check-label female-txt"
+                                                    for="female-radio">Female</label>
+                                            </div>
+                                            <div class="form-check form-check-inline radio-div">
+                                                <input class="form-check-input radio" type="radio" name="gender"
+                                                    id="trans-radio" value="trans">
+                                                <label class="form-check-label trans-txt"
+                                                    for="trans-radio">Transgender</label>
+                                            </div>
+                                        </div>
+                                        <div id="mail-phone" class="input-container">
+                                            <div class="mail">
+                                                <input type="email" class="input" id="email" placeholder="Email"
+                                                    required>
+                                            </div>
+                                            <div class="phone-number">
+                                                <input type="number" class="input" id="mobile-number"
+                                                    placeholder="Mobile Number" required>
+                                            </div>
+                                        </div>
+                                        <div id="nxt-btn" class="form-button">
+                                            <button>Next</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--................ ADDRESS TAB ..................-->
+                            <div class="tab-pane fade" id="nav-address" role="tabpanel"
+                                aria-labelledby="nav-address-tab" tabindex="0">
+                                <div class="register-form" id="address-form">
+                                    <!-- Address Form -->
+                                    <form action="">
+                                        <p><span>info!</span> Please provide your exact Address as per Aadhaar</p>
+                                        <div class="input-container" id="flat-street">
+                                            <input type="text" class="input" id="flat-block"
+                                                placeholder="Flat/Door/Block No." required>
+                                            <input type="text" class="input" id="street-lane"
+                                                placeholder="Street/Lane (Optional)">
+                                        </div>
+                                        <div class="input-container" id="area-pincode">
+                                            <input type="text" class="input" id="area-locality"
+                                                placeholder="Area/Locality (Optional)">
+                                            <input type="text" class="input" id="pincode" placeholder="Pin code"
+                                                required>
+                                        </div>
+                                        <div class="input-container" id="city-state">
+                                            <input type="text" class="input" id="city" placeholder="City" required>
+                                            <input type="text" class="input" id="state" placeholder="State" required>
+                                        </div>
+                                        <input type="text" class="input" id="post-offce" placeholder="Post Office"
+                                            required>
+                                        <div id="submit-btn" class="form-button">
+                                            <button>Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ASIDE VIDEO -->
+                <aside id="video-aside">
+                    <div class="video">
+                        <video src="video/video2.mp4" autoplay loop preload="auto" muted></video>
+                    </div>
+                    <div class="video">
+                        <video src="video/video3.mp4" autoplay loop preload="auto" muted></video>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Help</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+                </ul>
+                <p class="text-center text-body-secondary">© 2023 Indian Railways</p>
+            </footer>
+        </div>
+    </footer>
+
+    <!--! BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
